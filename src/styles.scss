@@ -1,0 +1,29 @@
+@import './custom-theme.scss';
+@import 'app/shared/styles/variables.scss';
+
+// typography styles
+
+.mat-typography h5 { 
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.23;
+}
+
+.mat-typography h6 {
+  font-size: 19px;
+  line-height: 1.23;
+  letter-spacing: 0.02em;
+}
+
+.mat-typography .small-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.24;
+}
+
+.mat-typography .bigger-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+

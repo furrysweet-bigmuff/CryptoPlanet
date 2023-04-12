@@ -1,0 +1,29 @@
+@import 'shared/styles/mixins';
+
+.wrapper div {
+  margin-left: 50px;
+  margin-bottom: 30px;
+  border: 1px solid #E2E8F0;
+  width: 500px;
+  height: 100px;
+}  
+
+.wrapper div:nth-child(2) {
+  @include blue-shadow-xs;
+}
+
+.wrapper div:nth-child(3) {
+  @include blue-shadow-sm;
+}
+
+.wrapper div:nth-child(4) {
+  @include blue-shadow-md;
+}
+
+.wrapper div:nth-child(5) {
+  @include blue-shadow-lg;
+}
+
+.wrapper div:nth-child(6) {
+  @include blue-shadow-xl;
+}
