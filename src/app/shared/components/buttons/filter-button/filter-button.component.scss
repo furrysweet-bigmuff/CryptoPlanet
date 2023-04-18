@@ -1,0 +1,19 @@
+.filter-button.mat-mdc-button.mat-mdc-button-base {
+  padding: 5px;
+  height: 34px;
+  transition: all 0.2s;
+  --mat-mdc-button-persistent-ripple-color: none;
+  .inner-wrap {
+    display: flex;
+    align-items: center;
+  }
+  .text  {
+    margin-left: 10px;
+    transition: all 0.3s;
+    // font-size: 0.9rem;
+  }
+}
+
+.filter-button.mat-mdc-button .mat-mdc-button-touch-target {
+  height: 34px;
+}

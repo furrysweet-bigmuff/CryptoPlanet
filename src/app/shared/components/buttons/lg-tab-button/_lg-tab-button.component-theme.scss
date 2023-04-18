@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+  
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+
+  $primary-palette: map.get($color-config, 'primary');
+  $accent-palette: map.get($color-config, 'accent');
+
+  .lg-tab-button.mdc-button.mat-mdc-outlined-button {
+    background-color: transparent;
+    border-bottom-color: mat.get-color-from-palette($accent-palette, 300);
+    color: mat.get-color-from-palette($accent-palette, 600);
+  }
+
+  .lg-tab-button.mdc-button.mat-mdc-outlined-button.light-theme-sm-tab-btn {
+    color: mat.get-color-from-palette($accent-palette, 500);
+  }
+
+  button.lg-tab-button.mdc-button.mat-mdc-outlined-button:hover,
+  .lg-tab-button.mdc-button.mat-mdc-outlined-button.light-theme-sm-tab-btn:hover {
+    border-bottom-color: mat.get-color-from-palette($primary-palette, 700);
+    background-color: transparent;
+    --mat-mdc-button-persistent-ripple-color: none;
+    svg path {
+      fill: mat.get-color-from-palette($primary-palette, 700);
+    }
+    .text {
+      color: mat.get-color-from-palette($primary-palette, 700);  
+    }
+    color: mat.get-color-from-palette($primary-palette, 700);
+  }
+}
+
+@mixin typography($theme) {
+  // Get the typography config from the theme.
+  $typography-config: mat.get-typography-config($theme);
+
+  .lg-tab-button.mdc-button.mat-mdc-outlined-button .text {
+    @include mat.typography-level($typography-config, 'body-2');
+  }
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+  $typography-config: mat.get-typography-config($theme);
+  @if $typography-config != null {
+    @include typography($theme);
+  }
+}

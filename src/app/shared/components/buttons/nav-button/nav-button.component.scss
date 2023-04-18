@@ -1,0 +1,17 @@
+.nav-button.mdc-button.mat-mdc-button-base {
+  padding: 51px 0;
+  border-color: transparent;
+  border-radius: 0;
+  border-bottom-width: 2px;
+  // .text  {
+  //   transition: all 0.3s;
+  // }
+}
+
+@media (max-width: 768px) {
+  .nav-button.mdc-button.mat-mdc-button-base {
+    // padding: 0 5px 32px;
+    // height: 52px;
+    // font-size: 1rem;
+  }
+}

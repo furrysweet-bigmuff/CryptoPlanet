@@ -1,0 +1,14 @@
+<button 
+  mat-raised-button
+  [ngClass]="{
+    'caret-button': true,
+    'light-theme-caret-button': (currentTheme !== 'dark')
+  }"
+>
+  <span class="text">{{text}}</span>
+  <mat-icon 
+    iconPositionEnd 
+    svgIcon="chevron-down" 
+    class="btn-icon"
+  ></mat-icon>
+</button>

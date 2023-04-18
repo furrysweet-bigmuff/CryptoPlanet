@@ -1,0 +1,17 @@
+.caret-button.mat-mdc-raised-button {
+  padding: 15px 20px;
+  // min-width: 143px;
+  height: 52px;
+  border-radius: 5px;
+  box-shadow: none;
+  transition: all 0.2s;
+  --mat-mdc-button-persistent-ripple-color: none;
+}
+
+@media (max-width: 768px) {
+  .caret-button.mat-mdc-raised-button {
+    // padding: 15px;
+    // height: 52px;
+    // border-radius: 5px
+  }
+}

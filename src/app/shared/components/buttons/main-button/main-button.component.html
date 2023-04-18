@@ -1,0 +1,9 @@
+<button 
+  mat-raised-button 
+  class={{color}}
+  [ngClass]="{
+    'main-button': true,
+    'dark-theme-btn': (currentTheme === 'dark'), 
+    'light-theme-btn': (currentTheme !== 'dark')
+  }"
+>{{text}}</button>

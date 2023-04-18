@@ -1,0 +1,17 @@
+.sm-tab-button.mat-mdc-outlined-button {
+  padding: 0 0 18px 0;
+  height: 40px;
+  border-radius: 0px;
+  border-width: 2px;
+  box-shadow: none;
+  transition: all 0.2s;
+  --mat-mdc-button-persistent-ripple-color: none;
+}
+
+@media (max-width: 768px) {
+  .sm-tab-button.mat-mdc-outlined-button {
+    // padding: 15px;
+    // height: 52px;
+    // border-radius: 5px
+  }
+}
