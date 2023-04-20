@@ -1,29 +1,49 @@
-@import './custom-theme.scss';
 @import 'app/shared/styles/variables.scss';
+@import 'app/shared/styles/icons.scss';
+// change styles for material component needs to be global
+@import 'app/shared/styles/custom-material-components-styles/custom-mat-radio-button.scss';
+@import 'app/shared/styles/custom-material-components-styles/custom-mat-slide-toggle.scss';
+  
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: 'Inter', sans-serif; 
+  font-size: 16px; 
+  line-height: 1.4;
+}
+
+* {
+  font-family: 'Inter', sans-serif; 
+}
 
 // typography styles
-
-.mat-typography h5 { 
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1.23;
-}
-
-.mat-typography h6 {
-  font-size: 19px;
-  line-height: 1.23;
-  letter-spacing: 0.02em;
-}
-
-.mat-typography .small-text {
-  font-size: 14px;
+h1 {
+  font-size: var(--h1);
   font-weight: 400;
-  line-height: 1.24;
 }
 
-.mat-typography .bigger-text {
-  font-size: 18px;
+h2 {
+  font-size: var(--h2);
   font-weight: 400;
-  line-height: 1.33;
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: 400;
+}
+
+h4 {
+  font-size: var(--h4);
+  font-weight: 400;
+}
+
+h5 { 
+  font-size: var(--h5);
+  font-weight: 400;
+}
+
+h6 {
+  font-size: var(--h6);
+  font-weight: 400;
 }
 

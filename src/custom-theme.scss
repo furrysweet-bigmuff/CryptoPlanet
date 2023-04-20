@@ -1,24 +1,14 @@
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 @use 'app/shared/styles/custom-palette.scss' as custom-palette;
 
-// Plus imports for other components in your app.
+@use 'app/shared/icons/icons-theme' as icons;
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$primary-palette: mat.define-palette(custom-palette.$primary-palette, 600);
+// Define the palettes for theme
+$primary-palette: mat.define-palette(custom-palette.$primary-palette, 700);
 $neutral-palette: mat.define-palette(custom-palette.$neutral-palette);
-
-// The warn palette is optional (defaults to red).
 $warn-palette: mat.define-palette(custom-palette.$warn-palette);
 
 // $success-palette: mat.define-palette(custom-palette.$success-palette);
@@ -40,16 +30,15 @@ $my-custom-typography-config: mat.define-typography-config(
   $body-1: mat.define-typography-level(27px, 1.24, 400),
   $body-2: mat.define-typography-level(16px, 1.4, 400),
   $caption: mat.define-typography-level(12px, 1.5, 400),
+  $button: mat.define-typography-level(16px, 1.45, 400),
 );
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
+
+// Create the theme object
 $theme-dark: mat.define-dark-theme((
   color: (
-    // primary: $neutral-palette,
     primary: $primary-palette,
     accent: $neutral-palette,
     warn: $warn-palette,
-    // success: $success-palette,
   ),
   typography: $my-custom-typography-config,
 ));
@@ -59,28 +48,36 @@ $theme-light: mat.define-light-theme((
     primary: $primary-palette,
     accent: $neutral-palette,
     warn: $warn-palette,
-    // success: $success-palette,
   ),
   typography: $my-custom-typography-config,
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-// @include mat.all-component-themes();
+// Change app BG for dark theme
+// Get color param from our theme
+$palette-color : map-get($theme-dark, color);
+// Get background param from color param
+$background: map-get($palette-color, background);
+// $background also has background param contains color, set it to red (for example)
+$background: map_merge($background, (background: #080808));
+// Set background param for palette
+$palette-color: map_merge($palette-color, (background: $background));
+// Set palette for theme
+$theme-dark: map_merge($theme-dark, (color: $palette-color));
 
-// $custom-background-color: map_get($mat-blue-grey, 50);
-
-// -or- Can set colour by hex value too
-
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.4;}
+// Change app BG for light theme
+$palette-color-light : map-get($theme-light, color);
+$background-light: map-get($palette-color-light, background);
+$background-light: map_merge($background-light, (background: #E6E9F1));
+$palette-color-light: map_merge($palette-color-light, (background: $background-light));
+$theme-light: map_merge($theme-light, (color: $palette-color-light));
 
 @include mat.typography-hierarchy($my-custom-typography-config);
 
 @include mat.all-component-themes($theme-dark);
-
+@include icons.theme($theme-dark);
 .theme-light {
   @include mat.all-component-colors($theme-light);
 }
+
+
 

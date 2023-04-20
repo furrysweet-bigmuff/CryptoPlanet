@@ -1,7 +1,72 @@
-// color for box-shadows
 :root {
+  // primary pallete
+  --primary-50: #e2f2ff;
+  --primary-100: #b9ddff;
+  --primary-200: #8ac8ff;
+  --primary-300: #56b2ff;
+  --primary-400: #25a1ff;
+  --primary-500: #0091ff;
+  --primary-600: #0083f8;
+  --primary-700: #5367FF;
+  --primary-800: #005fd2;
+  --primary-900: #0b3eb3;
+
+  // neutral pallete
+  --neutral-50: #F7F8FA;
+  --neutral-100: #F0F1F5;
+  --neutral-200: #E9EAF0;
+  --neutral-300: #CCCED9;
+  --neutral-400: #AEB1BF;
+  --neutral-500: #9295A6;
+  --neutral-600: #6C7080;
+  --neutral-700: #545766;
+  --neutral-800: #262833;
+  --neutral-900: #090A0D;
+
+ // warn pallete
+  --warn-50: #FEF2F2;
+  --warn-100: #FEE2E2;
+  --warn-200: #FECACA;
+  --warn-300: #FCA5A5;
+  --warn-400: #F87171;
+  --warn-500: #EF4444;
+  --warn-600: #DC2626;
+  --warn-700: #B91C1C;
+  --warn-800: #991B1B;
+  --warn-900: #7F1D1D;
+
+  // success pallete
+  --success-50: #ECFDF5;
+  --success-100: #D1FAE5;
+  --success-200: #A7F3D0;
+  --success-300: #6EE7B7;
+  --success-400: #34D399;
+  --success-500: #10B981;
+  --success-600: #03A66D;
+  --success-700: #047857;
+  --success-800: #065F46;
+  --success-900: #064E3B;
+
+  // bg colors
   --light-bg-color: #ffffff;
   --dark-bg-color: #080808;
+
+  // font color
+  --white-font: #ffffff;
+
+  // colors for box-shadows
   --shadow-grey-color: 0, 0, 0;
   --shadow-blue-color: 185, 221, 255;
+
+  // font sizes
+  --display02: 60px;
+  --h1: 48px;
+  --h2: 39px;
+  --h3: 33px;
+  --h4: 27px;
+  --h5: 19px;
+  --h6: 19px;
+  --p3: 18px;
+  --p2: 16px;
+  --p1: 14px;
 }
