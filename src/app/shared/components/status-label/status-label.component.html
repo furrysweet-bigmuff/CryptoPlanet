@@ -1,0 +1,8 @@
+<!-- 'status-label': true, -->
+<div
+  class="status-label"
+  [ngClass]="type === 'successfull' ? 'status-success' : 'status-rejected'
+  "
+>
+  {{ type | titlecase }}
+</div>

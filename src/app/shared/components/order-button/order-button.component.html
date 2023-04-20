@@ -1,0 +1,15 @@
+<button 
+  class="order-button"
+  [class.active]="isActive"
+  (click)="onClick($event)"
+>
+  <app-radio-button [value]="text"></app-radio-button>
+
+  <mat-icon 
+    *ngIf="icon" 
+    svgIcon={{icon}}
+    class="btn-icon"
+  ></mat-icon>
+
+  <span>{{ text }}</span>
+</button>

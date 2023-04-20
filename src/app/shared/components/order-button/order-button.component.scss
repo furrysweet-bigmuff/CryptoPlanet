@@ -1,0 +1,32 @@
+.order-button {
+  padding: 18px 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--neutral-800);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s all;
+  color: var(--neutral-600);
+  background-color: transparent;
+  font-size: var(--p2);
+  &.active {
+    background-color: var(--dark-bg-color);
+    color: var(--primary-700);
+  }
+  .btn-icon {
+    margin: 0 10px;
+  }
+  &:hover {
+    color: var(--primary-700);
+    border-color: var(--primary-700);
+  }
+}
+
+:host-context(.theme-light) .order-button {
+  border-color: var(--neutral-300);
+  &.active {
+    background-color: var(--primary-50);
+    border-color: transparent
+  }
+} 

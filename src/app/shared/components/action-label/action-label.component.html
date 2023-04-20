@@ -1,0 +1,14 @@
+<div
+  [ngClass]="{
+    'action': true,
+    'action-deposited': (type === 'deposited'),
+  }"
+>
+  <mat-icon 
+    svgIcon="{{type === 'deposited' ? 'deposited' : 'withdrawn'}}"
+    class="btn-icon left-icon"
+  ></mat-icon>
+  
+  <span> {{ type | titlecase }}</span>
+
+</div>

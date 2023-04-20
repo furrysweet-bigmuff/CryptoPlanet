@@ -1,0 +1,21 @@
+.status-label {
+  padding: 5px 8px;
+  display: inline-flex;
+  background: var(--dark-bg-color);
+  border-radius: 4px;
+  font-size: var(--p2);
+  &.status-rejected {
+    color: var(--warn-600);
+  }
+  &.status-success {
+    color: var(--success-600);
+  }
+}
+
+:host-context(.theme-light) .status-label.status-rejected {
+  background: var(--warn-100);
+}
+
+:host-context(.theme-light) .status-label.status-success {
+  background: var(--success-100);
+}

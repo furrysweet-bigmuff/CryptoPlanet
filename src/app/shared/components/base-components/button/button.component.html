@@ -1,0 +1,19 @@
+<button 
+  class={{type}}
+>
+
+  <mat-icon 
+    *ngIf="iconLeft" 
+    svgIcon={{iconLeft}}
+    class="btn-icon left-icon"
+  ></mat-icon>
+  
+  <span>{{ text }}</span>
+  
+  <mat-icon 
+    *ngIf="iconRight"
+    svgIcon={{iconRight}}
+    class="btn-icon right-icon"
+  ></mat-icon>
+
+</button>

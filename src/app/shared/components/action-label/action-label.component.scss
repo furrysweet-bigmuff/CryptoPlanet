@@ -1,0 +1,16 @@
+.action {
+  padding: 2px 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  .btn-icon {
+    margin-right: 10px;
+  }
+  span {
+    padding-top: 2px;
+  }
+}
+
+:host-context(.theme-light) .action {
+  color: var(--neutral-600)
+}
